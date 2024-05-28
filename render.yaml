@@ -1,6 +1,9 @@
 services:
-  - name: ml_handwriting
+  - name: char_recog
     type: web
     env: python
     buildCommand: "./build.sh"
     startCommand: "gunicorn app:app"
+    envVars:
+      - key: SERVER_ADDRESS
+        value: http://localhost:5000/
