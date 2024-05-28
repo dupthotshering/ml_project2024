@@ -1,0 +1,6 @@
+services:
+  - name: ml_handwriting
+    type: web
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn app:app"

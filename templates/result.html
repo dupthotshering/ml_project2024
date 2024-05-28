@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Recognition Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Recognition Result</h1>
+        <div class="text-center mt-4">
+            <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded Image" class="img-fluid">
+        </div>
+        <div class="text-center mt-4">
+            <h2>Predicted Character: <span class="display-3 text-primary font-weight-bold">{{ predicted_class }}</span></h2>
+        </div>
+        <div class="text-center mt-4">
+            <a href="/" class="btn btn-secondary">Upload Another Image</a>
+        </div>
+    </div>
+</body>
+</html>
